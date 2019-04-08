@@ -12,14 +12,12 @@ public class PalindromeObject {
     }
 
     public String[] getAllPalindromes(){
-        return null;
+        return PalindromeEvaluator.getAllPalindromes(input);
     }
 
     public Boolean isPalindrome(){
         return PalindromeEvaluator.isPalindrome(this.input);
     }
 
-    public String reverseString(){
-        return null;
-    }
+    public String reverseString(){ return PalindromeEvaluator.reverseString(input); }
 }

@@ -6,17 +6,23 @@ package rocks.zipcode.io.quiz4.objectorientation;
 public class StringAssembler {
 
     private Character delimeter;
+    private String buildIt;
+    private StringBuilder sbStatus;
     public StringAssembler(Character delimeter) {
+        this.sbStatus = new StringBuilder();
         this.delimeter = delimeter;
+        this.buildIt = "";
     }
 
     public StringAssembler append(String str) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(str + this.delimeter);
-        return null;
+
+        this.sbStatus.append(str);
+        this.sbStatus.append(this.delimeter);
+        return this;
     }
 
     public String assemble() {
-        return null;
+        this.sbStatus.setLength(this.sbStatus.length()-1);
+        return this.sbStatus.toString();
     }
 }
